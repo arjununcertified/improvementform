@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(194, 214, 255);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: aliceblue;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+header h1 {
+    color: red;
+    text-align: center;
+    margin: 0;
+}
+
+main {
+    margin-top: 70px; /* To prevent content from hiding under the fixed header */
+    padding: 20px;
+}
+
+.para {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 68, 255);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.formfill {
+    background-color: rgb(0, 68, 255);
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea#sugest {
+    resize: vertical;
+    height: 150px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    textarea#sugest {
+        height: 240px;
+    }
+}
