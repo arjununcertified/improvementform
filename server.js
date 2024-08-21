@@ -10,11 +10,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'views'))); // Adjust 'views' if necessary
+app.use(express.static(path.join(__dirname))); // Adjust 'views' if necessary
 
 // Route to serve the main page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Setup multer for file uploads
