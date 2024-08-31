@@ -14,11 +14,11 @@
         }
         h1 {
             text-align: center;
-            color: #333;
             padding: 20px 0;
             background-color: #007BFF;
             color: white;
             margin: 0;
+            animation: fadeIn 2s;
         }
         .container {
             padding: 20px;
@@ -27,6 +27,7 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideIn 1.5s ease-out;
         }
         .content a {
             font-size: 18px;
@@ -34,16 +35,38 @@
             color: #007BFF;
             text-decoration: none;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f8ff;
+            transition: background-color 0.3s, color 0.3s;
         }
         .content a:hover {
-            text-decoration: underline;
+            background-color: #0056b3;
+            color: white;
         }
-        .content span {
+        .content a span {
             display: block;
-            margin-bottom: 20px;
+            margin-top: 5px;
             font-size: 16px;
             line-height: 1.6;
+            color: #555;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .content a:hover span {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
@@ -51,17 +74,26 @@
     <h1>Contents</h1>
     <div class="container">
         <div class="content">
-            <a href="./prop.html">1. Propaganda:</a>
-            <span>How politicians manipulate our thinking during elections and on social issues. Learn how propaganda influences people's thoughts.</span>
-            <a href="./sextortion.html">2. Online Sexual Assault - Sextortion:</a>
-            <span>In the digital age, the line between dangers and friends has disappeared. Protect yourself and your children from online sextortion.</span>
-            <a href="./scams-and-tackles.html">3. Online Scams and Safety</a>
-            <span>Online scams are increasing rapidly. Learn how to protect yourself from scammers and stay safe online.</span>
-            <a href="./cybersecurity-tips-for-students.html">4. Online Safety Tips for Students and the General Public</a>
-            <span>Cybersecurity is essential knowledge for everyone. Find tips and advice on how to stay safe online.</span>
-            <a href="./form-for-improvement.html">Give Sugestion for Country Improvement. </a>
-            <span>Being a Indian, How you Imagine India to be.</span>
+            <a href="./prop.html">1. Propaganda:
+                <span>How politicians manipulate our thinking during elections and on social issues. Learn how propaganda influences people's thoughts.</span>
+            </a>
+            <a href="./sextortion.html">2. Online Sexual Assault - Sextortion:
+                <span>In the digital age, the line between dangers and friends has disappeared. Protect yourself and your children from online sextortion.</span>
+            </a>
+            <a href="./scams-and-tackles.html">3. Online Scams and Safety:
+                <span>Online scams are increasing rapidly. Learn how to protect yourself from scammers and stay safe online.</span>
+            </a>
+            <a href="./cybersecurity-tips-for-students.html">4. Online Safety Tips for Students and the General Public:
+                <span>Cybersecurity is essential knowledge for everyone. Find tips and advice on how to stay safe online.</span>
+            </a>
+            <a href="./form-for-improvement.html">5. Give Suggestion for Country Improvement:
+                <span>Being an Indian, how you imagine India to be.</span>
+            </a>
+            <a href="./conversion.html">6. Conversion in India:
+                <span>Explore the dynamics and implications of religious conversions in India.</span>
+            </a>
         </div>
     </div>
 </body>
 </html>
+
