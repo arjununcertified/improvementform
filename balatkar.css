@@ -1,0 +1,120 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f4f4f9, #e1e7ec);
+    color: #000000;
+}
+
+header {
+    background-color: #0056b3; /* Darker shade for contrast */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700; /* Make header bold */
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h3 {
+    color: #0056b3; /* Consistent color */
+    font-size: 1.5rem; /* Slightly larger for emphasis */
+}
+
+h4, caption {
+    color: #555;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #c0fadf; /* Light grey for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+/* Dynamic Hover Effect */
+li:hover h3 {
+    color: #d9534f; /* Highlight color on hover */
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    ul, ol {
+        margin-left: 15px; /* Reduce margin on smaller screens */
+    }
+}
+
+/* Attractive Color Scheme */
+.suraksha h4, .karan h4, .extra h3 {
+    background-color: #f7f9fc;
+    padding: 10px;
+    border-left: 5px solid #0056b3;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 600; /* Slightly bolder for emphasis */
+}
+
+/* Footer */
+footer {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+a{
+    color: darkorange;
+}
