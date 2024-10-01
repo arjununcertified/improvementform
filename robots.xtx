@@ -1,0 +1,8 @@
+# Allow all crawlers access to the entire site
+User-agent: *
+Disallow:
+
+# You can specify sections of the website to block by adding:
+# Disallow: /path-to-block/
+# For example, to block a folder named 'private':
+# Disallow: /private/
