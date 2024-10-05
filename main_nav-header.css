@@ -68,12 +68,26 @@
         font-size: 0.95rem;
         margin: 0 3px;
     }
-    .header1 nav{
-        flex-direction: column;
+    .share_button {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:400px){
+    .header1 nav a{
+        font-size: 0.95rem;
+        margin: 0 3px;
     }
     .share_button {
         width: 70px;
         height: 30px;
         font-size: 16px;
+    }
+}
+@media (max-width:250px){
+    .header1 nav{
+        flex-direction: column;
     }
 }
