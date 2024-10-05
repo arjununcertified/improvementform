@@ -12,6 +12,7 @@
     height: 40px;
     display: flex;
     justify-content: center;
+    flex-direction:row;
 }
 
 .header1 nav a {
@@ -53,6 +54,9 @@
     background-color: #352bc0;
 }
 @media (max-width:700px){
+    .header1 nav{
+        flex-direction:row;
+    }
     .header1 nav a{
         font-size: 1.0rem;
         margin: 0 5px;
