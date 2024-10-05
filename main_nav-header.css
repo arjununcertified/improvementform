@@ -1,23 +1,10 @@
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
 .header1 {
-     background-image: url('./mountains-3324569_1920.jpg');
-            color: #fff;
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            text-align: center;
+    padding-top: 20px;
+    background-image: url('./mountains-3324569_1920.jpg');
+    color: #fff;
+    top: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .header1 nav {
@@ -65,14 +52,28 @@ body {
 .share_button:hover {
     background-color: #352bc0;
 }
-@media (max-width: 700px) {
-            nav a {
-                font-size: 14px;
-                margin: 0 5px;
-            }
-            .share_button {
-                width: 80px;
-                font-size: 14px;
-            }
-        }
-            
+@media (max-width:700px){
+    .header1 nav a{
+        font-size: 1.0rem;
+        margin: 0 5px;
+    }
+    .share_button {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+@media (max-width:400px){
+    .header1 nav a{
+        font-size: 0.95rem;
+        margin: 0 3px;
+    }
+    .header1 nav{
+        flex-direction: column;
+    }
+    .share_button {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
