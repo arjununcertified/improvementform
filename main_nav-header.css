@@ -1,10 +1,23 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
 .header1 {
-    background-image: url('./mountains-3324569_1920.jpg');
-    color: #fff;
-    padding: 10px 0;
-    top: 0;
-    width: 100%;
-    text-align: center;
+     background-image: url('./mountains-3324569_1920.jpg');
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
 }
 
 .header1 nav {
