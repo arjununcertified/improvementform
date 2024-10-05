@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arjun Kumar - Profile</title>
     <meta name="description" content="Profile page of Arjun Kumar, a BSc student pursuing Mathematics with interests in CyberSecurity and Politics.">
-
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #e3f2fd; /* Light blue background */
+            background-color: #e3f2fd;
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,13 +19,13 @@
         }
 
         .profile {
-            background-color: #ffffff; /* White background for profile */
+            background-color: #ffffff;
             width: 90%;
             max-width: 600px;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
-            border-top: 5px solid #007BFF; /* Blue top border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #007BFF;
         }
 
         h3 {
@@ -139,10 +138,84 @@
         .email-form button:hover {
             background-color: #0056b3;
         }
-        
-    </style>
-    <link rel="stylesheet" href="./main_nav-header.css">
 
+        /* Header Styling */
+        .header1 {
+            background-image: url('./mountains-3324569_1920.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 10px 0;
+            top: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header1 nav {
+            padding-top: 8px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header1 nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .header1 nav ul li {
+            display: inline;
+        }
+
+        .header1 nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, border 0.3s ease;
+        }
+
+        .header1 nav a:hover {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            text-decoration: underline;
+            color: #000;
+        }
+
+        /* Share Button Styling */
+        .share_button {
+            background-color: #ff5733;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            height: 50px;
+            width: 120px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .share_button:hover {
+            background-color: #352bc0;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .header1 nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header1 nav ul li {
+                margin: 10px 0;
+            }
+
+            .share_button {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header1">
@@ -155,33 +228,12 @@
                 <li><button class="share_button" onclick="shareContent()">Share</button></li>
             </ul>
         </nav>
-
-        <script>
-            function shareContent() {
-                const shareUrl = window.location.href; // Get the current page URL
-                const shareText = "Check out this awesome website!";
-
-                if (navigator.share) { // Check if the Web Share API is supported
-                    navigator.share({
-                        title: 'Share Loves',
-                        text: shareText,
-                        url: shareUrl
-                    })
-                    .then(() => console.log('Successful share'))
-                    .catch(error => console.log('Error sharing:', error));
-                } else {
-                    alert(`Share this link: ${shareUrl}`); // Fallback for unsupported browsers
-                }
-            }
-        </script>
     </header>
 
     <div class="profile">
         <h3>Introduction</h3>
         <div class="intro">
-            <div class="img">
-                <img src="./uploads/WhatsApp Image 2024-09-06 at 14.11.38_10ad968c.jpg" alt="Arjun Kumar's Profile Picture" class="profile-pic">
-            </div>
+            <img src="./uploads/WhatsApp Image 2024-09-06 at 14.11.38_10ad968c.jpg" alt="Arjun Kumar's Profile Picture" class="profile-pic">
             <div class="data">
                 <p id="name">Arjun Kumar</p>
                 <p>arjunbhaiya415@gmail.com</p>
@@ -193,13 +245,10 @@
         <div class="edu">
             <label for="hedu">Qualified: </label>
             <span>Intermediate (BSEB) with PCM</span>
-
             <label for="edu2">Higher Education: </label>
             <span>BSc (Mathematics) - Bhimrao Ambedkar Bihar University, Muzaffarpur (pursuing)</span>
-
             <label for="Interest">Interested In: </label>
             <span>CyberSecurity and Politics</span>
-
             <label for="skill">Skills: </label>
             <span>Communication, Decision Making, Logical Thinking, Political Analytics, Ethical Hacking (learning)</span>
         </div>
@@ -223,6 +272,24 @@
             var emailLink = document.getElementById('emailLink');
             emailLink.href = `mailto:arjunkrsah1008@gmail.com?subject=Message from Website&body=${encodeURIComponent(message)}`;
         });
+
+        // Share functionality
+        function shareContent() {
+            const shareUrl = window.location.href;
+            const shareText = "Check out this awesome website!";
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Share Loves',
+                    text: shareText,
+                    url: shareUrl
+                })
+                .then(() => console.log('Content shared successfully'))
+                .catch((error) => console.error('Error sharing:', error));
+            } else {
+                alert("Sharing is not supported in this browser.");
+            }
+        }
     </script>
 </body>
 </html>
