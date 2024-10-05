@@ -69,9 +69,42 @@
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+
+        <link rel="stylesheet" href="./main_nav-header.css"> 
     </style>
 </head>
 <body>
+    <header class="header1">
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./contents.html">Contents</a>
+            <a href="./profile.html">About Me</a>
+            <a href="./download_Docs.html">Download</a>
+            <button class="share_button" onclick="shareContent()">
+                Share
+            </button>
+
+            <script>
+                function shareContent() {
+                    const shareUrl = window.location.href; // Get the current page URL
+                    const shareText = "Check out this awesome website!";
+    
+                    if (navigator.share) { // Check if the Web Share API is supported
+                        navigator.share({
+                            title: 'Share Loves',
+                            text: shareText,
+                            url: shareUrl
+                        })
+                        .then(() => console.log('Successful share'))
+                        .catch(error => console.log('Error sharing:', error));
+                    } else {
+                        alert(`Share this link: ${shareUrl}`); // Fallback for unsupported browsers
+                    }
+                }
+            </script>
+        </nav>
+    </header>
+    
     <h1>Contents</h1>
     <div class="container">
         <div class="content">
