@@ -98,6 +98,44 @@
             color: #0056b3;
             text-decoration: underline;
         }
+
+        /* Email form section styling */
+        .email-form {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .email-form label {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .email-form textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+            resize: vertical;
+        }
+
+        .email-form button {
+            margin-top: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .email-form button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -105,7 +143,7 @@
         <h3>Introduction</h3>
         <div class="intro">
             <div class="img">
-                <img src="profilepic.jpg" alt="Profile Picture" class="profile-pic">
+                <img src="./uploads/WhatsApp Image 2024-09-06 at 14.11.38_10ad968c.jpg" alt="Profile Picture" class="profile-pic">
             </div>
             <div class="data">
                 <p id="name">Arjun Kumar</p>
@@ -128,8 +166,26 @@
             <label for="skill">Skills: </label>
             <span>Communication, Decision Making, Logical Thinking, Political Analytics, Ethical Hacking (learning)</span>
         </div>
-      <a href="./index.html">Go To Content Section</a>
-        <img width="100px" height="100px" src="https://drive.google.com/uc?id=1-5I_B7PxaunR3uC0E9HuyNvnAABuDDct" alt="Beautiful Mountain Scenery" class="lt_img">
+
+        <!-- Email form section -->
+        <div class="email-form">
+            <h3>Write a Message</h3>
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Write your message here..."></textarea>
+            <br>
+            <a href="mailto:arjunkrsah1008@gmail.com?subject=Message from Website&body=" id="emailLink">
+                <button type="button">Send Email</button>
+            </a>
+        </div>
     </div>
+
+    <script>
+        // Update the mailto link with the message content
+        document.querySelector('button').addEventListener('click', function() {
+            var message = document.getElementById('message').value;
+            var emailLink = document.getElementById('emailLink');
+            emailLink.href = `mailto:arjunkrsah1008@gmail.com?subject=Message from Website&body=${encodeURIComponent(message)}`;
+        });
+    </script>
 </body>
 </html>
