@@ -141,14 +141,17 @@
 
         /* Header Styling */
         .header1 {
-            background-image: url('./mountains-3324569_1920.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 10px 0;
-            top: 0;
-            width: 100%;
-            text-align: center;
+    background-image: url('./mountains-3324569_1920.jpg'); /* Make sure this path is correct */
+    background-size: cover;
+    background-position: center;
+    background-color: #007BFF; /* Fallback color */
+    color: #fff;
+    padding: 20px 0; /* Increased padding for visibility */
+    width: 100%;
+    text-align: center;
+    position: relative; /* Ensure the header stays on top */
+    z-index: 10; /* Ensure no overlapping */
+
         }
 
         .header1 nav {
@@ -214,21 +217,25 @@
                 width: 100%;
                 max-width: 200px;
             }
+            .header1 {
+        padding: 15px 0;
+        background-position: top;
         }
     </style>
 </head>
 <body>
     <header class="header1">
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./contents.html">Contents</a></li>
-                <li><a href="./profile.html">About Me</a></li>
-                <li><a href="./download_Docs.html">Download</a></li>
-                <li><button class="share_button" onclick="shareContent()">Share</button></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./contents.html">Contents</a></li>
+            <li><a href="./profile.html">About Me</a></li>
+            <li><a href="./download_Docs.html">Download</a></li>
+            <li><button class="share_button" onclick="shareContent()">Share</button></li>
+        </ul>
+    </nav>
+</header>
+
 
     <div class="profile">
         <h3>Introduction</h3>
