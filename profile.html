@@ -15,6 +15,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width:100%;
             height: 100vh;
         }
 
@@ -139,89 +140,9 @@
             background-color: #0056b3;
         }
 
-        /* Header Styling */
-        .header1 {
-    background-image: url('./mountains-3324569_1920.jpg'); /* Make sure this path is correct */
-    background-size: cover;
-    background-position: center;
-    background-color: #007BFF; /* Fallback color */
-    color: #fff;
-    padding: 20px 0; /* Increased padding for visibility */
-    width: 100%;
-    text-align: center;
-    position: relative; /* Ensure the header stays on top */
-    z-index: 10; /* Ensure no overlapping */
-
-        }
-
-        .header1 nav {
-            padding-top: 8px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .header1 nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .header1 nav ul li {
-            display: inline;
-        }
-
-        .header1 nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s ease, border 0.3s ease;
-        }
-
-        .header1 nav a:hover {
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            text-decoration: underline;
-            color: #000;
-        }
-
-        /* Share Button Styling */
-        .share_button {
-            background-color: #ff5733;
-            color: white;
-            cursor: pointer;
-            font-size: 18px;
-            height: 50px;
-            width: 120px;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .share_button:hover {
-            background-color: #352bc0;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .header1 nav ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .header1 nav ul li {
-                margin: 10px 0;
-            }
-
-            .share_button {
-                width: 100%;
-                max-width: 200px;
-            }
-            .header1 {
-        padding: 15px 0;
-        background-position: top;
-        }
+        
     </style>
+    <link rel="stylesheet" href="./main_nav-header.css">
 </head>
 <body>
     <header class="header1">
