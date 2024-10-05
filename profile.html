@@ -147,42 +147,40 @@
 <body>
     <header class="header1">
         <nav>
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./contents.html">Contents</a></li>
-        <li><a href="./profile.html">About Me</a></li>
-        <li><a href="./download_Docs.html">Download</a></li>
-        <li><button class="share_button" onclick="shareContent()">Share</button></li>
-    </ul>
-      </nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./contents.html">Contents</a></li>
+                <li><a href="./profile.html">About Me</a></li>
+                <li><a href="./download_Docs.html">Download</a></li>
+                <li><button class="share_button" onclick="shareContent()">Share</button></li>
+            </ul>
+        </nav>
 
+        <script>
+            function shareContent() {
+                const shareUrl = window.location.href; // Get the current page URL
+                const shareText = "Check out this awesome website!";
 
-            <script>
-                function shareContent() {
-                    const shareUrl = window.location.href; // Get the current page URL
-                    const shareText = "Check out this awesome website!";
-    
-                    if (navigator.share) { // Check if the Web Share API is supported
-                        navigator.share({
-                            title: 'Share Loves',
-                            text: shareText,
-                            url: shareUrl
-                        })
-                        .then(() => console.log('Successful share'))
-                        .catch(error => console.log('Error sharing:', error));
-                    } else {
-                        alert(`Share this link: ${shareUrl}`); // Fallback for unsupported browsers
-                    }
+                if (navigator.share) { // Check if the Web Share API is supported
+                    navigator.share({
+                        title: 'Share Loves',
+                        text: shareText,
+                        url: shareUrl
+                    })
+                    .then(() => console.log('Successful share'))
+                    .catch(error => console.log('Error sharing:', error));
+                } else {
+                    alert(`Share this link: ${shareUrl}`); // Fallback for unsupported browsers
                 }
-            </script>
+            }
+        </script>
     </header>
 
-    
     <div class="profile">
         <h3>Introduction</h3>
         <div class="intro">
             <div class="img">
-                <img src="./uploads/WhatsApp Image 2024-09-06 at 14.11.38_10ad968c.jpg" alt="Profile Picture" class="profile-pic">
+                <img src="./uploads/WhatsApp Image 2024-09-06 at 14.11.38_10ad968c.jpg" alt="Arjun Kumar's Profile Picture" class="profile-pic">
             </div>
             <div class="data">
                 <p id="name">Arjun Kumar</p>
@@ -213,14 +211,14 @@
             <textarea id="message" placeholder="Write your message here..."></textarea>
             <br>
             <a href="mailto:arjunkrsah1008@gmail.com?subject=Message from Website&body=" id="emailLink">
-                <button type="button">Send Email</button>
+                <button type="button" id="sendButton">Send Email</button>
             </a>
         </div>
     </div>
 
     <script>
         // Update the mailto link with the message content
-        document.querySelector('button').addEventListener('click', function() {
+        document.getElementById('sendButton').addEventListener('click', function() {
             var message = document.getElementById('message').value;
             var emailLink = document.getElementById('emailLink');
             emailLink.href = `mailto:arjunkrsah1008@gmail.com?subject=Message from Website&body=${encodeURIComponent(message)}`;
