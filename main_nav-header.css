@@ -1,0 +1,54 @@
+.header1 {
+    background-image: url('./mountains-3324569_1920.jpg');
+    color: #fff;
+    padding: 10px 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.header1 nav {
+    padding-top: 8px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.header1 nav a {
+    color: #fff;
+    margin: 0 15px;
+    padding: 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.header1 nav a:hover {
+    border: 3px solid rgba(255, 255, 255, 0.311);
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.share_action {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.share_button {
+    background-color: #ff5733;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share_button:hover {
+    background-color: #352bc0;
+}
