@@ -1,0 +1,208 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #0073e6; /* Light blue background */
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    border-bottom: 4px solid #004a99;
+}
+
+/* Header Title */
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Short Summary */
+header p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* Section for introduction */
+.intro p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Styling for facts and events */
+.facts, .realevents {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #eef5ff;
+    border-left: 4px solid #0073e6;
+}
+
+/* Headings */
+h4 {
+    color: #004a99;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Links */
+a {
+    color: #0073e6;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .facts, .realevents {
+        padding: 15px;
+    }
+
+    h4 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    h4 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #004a99; /* Dark blue background */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 4px solid #0073e6;
+    margin-top: 40px;
+}
+
+/* Footer content styling */
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Footer text */
+footer p {
+    font-size: 1em;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* Footer links */
+footer a {
+    color: #ffdd00; /* Yellow color for links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #ffd700; /* Light yellow on hover */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    footer p {
+        font-size: 0.8em;
+    }
+}
+
+
+/* Styling for the download section */
+.downloadpdf {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.downloadpdf p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Styling the download link */
+.download-link {
+    display: inline-block;
+    background-color: #0073e6; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the download link */
+.download-link:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
