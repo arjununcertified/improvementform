@@ -25,108 +25,104 @@
     <meta name="twitter:image" content="https://onaircomment.in/images/india-heroes-preview.jpg" />
 
     <style>
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 7px;
+            text-align: center;
+            font-size: 24px;
+        }
 
-/** india's hero**/
+      
 
-.indiashero {
-    justify-content: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
-}
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 40px;
+        }
 
-.indiashero h4 {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 40px;
-    color: #333;
-}
+        /* india's hero styling */
+        .indiashero {
+            justify-content: center;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
 
-.hero {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 40px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 30px;
-    padding-left: 50px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        .indiashero h4 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #333;
+        }
 
-.img_l {
-    flex-shrink: 0;
-    margin-right: 20px;
-}
+        .hero {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 30px;
+            padding-left: 50px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-.img_l img {
-    width: 160px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 10%;
-    border: 2px solid #333;
-}
+        .img_l {
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
 
-.thought_l h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #d9534f; /* Deep red for contrast */
-}
+        .img_l img {
+            width: 160px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10%;
+            border: 2px solid #333;
+        }
 
-.thought_l p {
-    font-size: 16px;
-    color: #000000;
-    line-height: 1.8; /* Increased line-height */
-    margin-bottom: 10px; /* Adds spacing between quotes */
-}
+        .thought_l h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #d9534f; /* Deep red for contrast */
+        }
 
+        .thought_l p {
+            font-size: 16px;
+            color: #000000;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
 
+        @media screen and (max-width: 700px) {
+            .hero {
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
 
-@media screen and (max-width: 700px) {
-    .hero {
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
+            .img_l {
+                margin: 0 auto 20px;
+            }
 
-    .img_l {
-        margin: 0 auto 20px;
-    }
+            .thought_l h3 {
+                font-size: 18px;
+            }
 
-    .thought_l h3 {
-        font-size: 18px;
-    }
-
-    .thought_l p {
-        justify-content: center;
-        text-align: center;
-        font-size: 14px;
-    }
-}
-
-     /* Header styling */
-     header {
-        background-color: #333;
-        color: #fff;
-        padding: 7px;
-        text-align: center;
-        font-size: 24px;
-    }
-
-    
-
-    /* Footer styling */
-    footer {
-        background-color: #333;
-        color: #fff;
-        padding: 15px;
-        text-align: center;
-        font-size: 16px;
-        margin-top: 40px;
-    }
+            .thought_l p {
+                justify-content: center;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
