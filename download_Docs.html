@@ -20,7 +20,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            max-width: 1000px;
+            max-width: 900px;
             width: 100%;
             margin: 20px;
         }
@@ -45,6 +45,7 @@
             text-decoration: none;
             color: #007BFF;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
         a:hover {
             text-decoration: underline;
@@ -56,12 +57,38 @@
             display: block;
             margin-top: 5px;
         }
-        
+        .share_button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .share_button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                max-width: 95%;
+            }
+            .content h3 {
+                font-size: 20px;
+            }
+            a {
+                font-size: 16px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="main_nav-header.css">
 </head>
 <body>
-    <header class="header1">
+    <header>
         <nav>
             <a href="./index.html">Home</a>
             <a href="./contents.html">Contents</a>
@@ -70,25 +97,6 @@
             <button class="share_button" onclick="shareContent()">
                 Share
             </button>
-
-            <script>
-                function shareContent() {
-                    const shareUrl = window.location.href; // Get the current page URL
-                    const shareText = "Check out this awesome website!";
-    
-                    if (navigator.share) { // Check if the Web Share API is supported
-                        navigator.share({
-                            title: 'Share Loves',
-                            text: shareText,
-                            url: shareUrl
-                        })
-                        .then(() => console.log('Successful share'))
-                        .catch(error => console.log('Error sharing:', error));
-                    } else {
-                        alert(`Share this link: ${shareUrl}`); // Fallback for unsupported browsers
-                    }
-                }
-            </script>
         </nav>
     </header>
     
@@ -98,15 +106,38 @@
             <p>For downloading, click on the links below:</p>
             <ol>
                 <li>
-                    <a href="https://drive.proton.me/urls/7Y95B2443R#yjVpyrO4tpvh">धर्म और धर्मांतर :</a>
+                    <a href="https://drive.proton.me/urls/7Y95B2443R#yjVpyrO4tpvh" target="_blank">धर्म और धर्मांतर (PDF):</a>
                     <span>आधुनिक धर्म क्या है? जितनी आबादी उतना ताकत और दो व्यक्त की रोटी।</span>
                 </li>
                 <li>
-                    <a href="https://drive.proton.me/urls/JBW3AQSNNR#KFoGwFn0ClFb">राजनेता और आतंकवाद :</a>
+                    <a href="https://drive.proton.me/urls/JBW3AQSNNR#KFoGwFn0ClFb" target="_blank">राजनेता और आतंकवाद (DOCX):</a>
                     <span>आतंकवाद का जन्मदाता कौन? फैली हुई गंदगी को साफ करने के लिए गंदे नहीं अच्छे लोगों की जरूरत पड़ती है।</span>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1-6iyoOh97PkiPO28g_OhP14ViJd26Q_T/view?usp=drive_link" target="_blank">चाणक्य नीति (PDF):</a>
+                    <span>चाणक्य की नीतियाँ जो जीवन में सफलता का मार्गदर्शन करती हैं।</span>
                 </li>
             </ol>
         </div>
     </div>
+
+    <script>
+        function shareContent() {
+            const shareUrl = window.location.href;
+            const shareText = "Check out this awesome website!";
+    
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Download Articles and Documents',
+                    text: shareText,
+                    url: shareUrl
+                })
+                .then(() => console.log('Successful share'))
+                .catch(error => console.log('Error sharing:', error));
+            } else {
+                alert(`Share this link: ${shareUrl}`);
+            }
+        }
+    </script>
 </body>
 </html>
